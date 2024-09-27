@@ -1,0 +1,235 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  color: #333;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.search-aside-container {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #EAECF0;
+  width: Fixed (280px)px;
+  height: Fixed (1, 080px)px;
+  gap: 0px;
+  border: 0px 1px 0px 0px;
+  justify: space-between;
+  opacity: 0px;
+}
+
+.search-line {
+  padding: 32px 24px 24px;
+  gap: 24px;
+}
+
+.search-line>input {
+  width: Fill (232px)px;
+  height: Hug (36px)px;
+  padding: 8px 16px 8px 16px;
+  gap: 8px;
+  border-radius: 8px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid #EAECF0
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  width: Hug (170px)px;
+  height: Hug (32px)px;
+  gap: 16px;
+  opacity: 0px;
+}
+
+.logo-container>img {
+  max-width: 32px;
+}
+
+.search-aside-container>footer {
+  width: Fill (280px)px;
+  height: Hug (136px)px;
+  padding: 32px 24px 32px 24px;
+  gap: 10px;
+  opacity: 0px;
+  border-right: 1px solid #EAECF0
+}
+
+.search-container {
+  width: Fill (280px)px;
+  height: Hug (308px)px;
+  gap: 16px;
+  opacity: 0px;
+  flex: 1;
+}
+
+.resources-container {
+  width: Fill (280px)px;
+  height: Hug (168px)px;
+  padding: 0px 16px 0px 16px;
+  gap: 16px;
+  opacity: 0px;
+}
+
+.resources-container>h2 {
+  width: Fill (248px)px;
+  height: Hug (36px)px;
+  padding: 6px 8px 6px 8px;
+  gap: 8px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+  background: #F2F4F7;
+}
+
+.resources-container>p {
+  width: Fill (248px)px;
+  height: Hug (40px)px;
+  padding: 8px 8px 8px 24px;
+  gap: 8px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+}
+
+.news-main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.news-main-container>header {
+  width: Fixed (1, 640px)px;
+  height: Hug (96px)px;
+  top: 2px;
+  left: 280px;
+  padding: 32px 32px 24px 32px;
+  gap: 24px;
+  border: 0px 0px 1px 0px;
+  opacity: 0px;
+  border-bottom: 1px solid #EAECF0
+}
+
+.nav-conatiner {
+  display: flex;
+  flex-direction: row;
+  width: Fill (1, 576px)px;
+  height: Hug (40px)px;
+  gap: 10px;
+  opacity: 0px;
+  justify-content: space-between;
+}
+
+.nav-conatiner>h2 {
+  font-family: Inter;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: left;
+}
+
+.sort-dropdown-container {
+  position: relative;
+}
+
+.dropdown-list {
+  width: Fixed (230px)px;
+  height: Hug (128px)px;
+  list-style-type: none;
+  padding: 6px;
+  margin: 0;
+  display: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  gap: 4px;
+  opacity: 0px;
+  box-shadow: 0px 4px 16px 0px #00000014;
+}
+
+.dropdown-list li {
+  width: Fill (218px)px;
+  height: Hug (36px)px;
+  cursor: pointer;
+  padding: 6px 16px 6px 16px;
+  gap: 8px;
+  border-radius: 6px 0px 0px 0px;
+  opacity: 0px;
+}
+
+.dropdown-list li:hover {
+  background: #F2F4F7;
+}
+
+.dropdown-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+
+  width: Hug (178px)px;
+  height: Hug (40px)px;
+  padding: 8px 16px 8px 16px;
+  gap: 8px;
+  border-radius: 8px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background: #FFFFFF;
+  border: 1px solid #EAECF0
+}
+
+
+.news-block-container {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin: 24px 32px;
+}
+
+.news-article-container {
+  width: Fill (370px)px;
+  height: Fixed (600px)px;
+  padding: 24px;
+  border-radius: 8px;
+  gap: 16px;
+  border: 1px solid #EAECF0;
+  opacity: 0px;
+}
+
+.news-article-container>header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: Fill (322px)px;
+  height: Hug (24px)px;
+  gap: 16px;
+  opacity: 0px;
+}
+
+.article-subject,
+.article-date {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  color: #667085;
+}
+
+.resources-container,
+.news-block-container {
+  flex: 1;
+}
