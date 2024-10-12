@@ -18,6 +18,21 @@ html {
   height: 100%;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hidden,
+#aside-btn {
+  display: none;
+}
+
 .news-container {
   display: flex;
   flex-direction: row;
@@ -25,13 +40,13 @@ html {
 }
 
 .search-aside-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr auto;
   border-right: 1px solid #EAECF0;
-  width: 20%;
+  width: 30%;
   gap: 1rem;
   border: 0px 1px 0px 0px;
-  justify-content: space-between;
+  align-content: space-between;
 }
 
 .search-container,
@@ -41,8 +56,8 @@ html {
 }
 
 .search-line {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr;
   width: 100%;
   height: auto;
   padding: 1.7rem 1rem;
@@ -50,7 +65,7 @@ html {
 }
 
 .search-line>input {
-  width: auto;
+  width: 100%;
   height: auto;
   padding: 8px 16px 8px 16px;
   gap: 8px;
@@ -61,12 +76,11 @@ html {
 }
 
 .logo-container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: auto 1fr;
   width: 100%;
   height: auto;
   gap: 1rem;
-  opacity: 0px;
 }
 
 .logo-container>img {
@@ -85,7 +99,6 @@ html {
   /*height: 308px;*/
   gap: 1rem;
   opacity: 0px;
-  flex: 1;
 }
 
 .resources-container {
@@ -116,16 +129,16 @@ html {
 }
 
 .news-main-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /*flex-direction: column;*/
+  grid-template-rows: auto 1fr;
 }
 
 .nav-conatiner {
-  width: Fixed (1, 640px)px;
+  width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
   top: 2px;
   padding: 32px 32px 24px 32px;
@@ -137,8 +150,7 @@ html {
 
 }
 
-.nav-conatiner>h2 {
-  font-family: Inter;
+.nav-conatiner h2 {
   font-size: 30px;
   font-weight: 600;
   line-height: 40px;
@@ -151,7 +163,7 @@ html {
 
 .dropdown-list {
   width: Fixed (230px)px;
-  height: 128px;
+  height: auto;
   list-style-type: none;
   padding: 6px;
   margin: 0;
@@ -183,14 +195,14 @@ html {
 }
 
 .dropdown-btn {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
   cursor: pointer;
 
   width: 178px;
   height: auto;
-  padding: 8px 16px 8px 16px;
+  padding: 10px 16px;
   gap: 8px;
   border-radius: 8px;
   border: 1px;
@@ -209,8 +221,9 @@ html {
 .news-article-container {
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 0.5fr 3fr 1fr 1fr;
+  /*flex-direction: column;*/
   padding: 1.5rem;
   border-radius: 8px;
   gap: 1rem;
@@ -219,13 +232,10 @@ html {
 }
 
 .news-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  /*width: Fill (322px)px;*/
-  /*height: 24px;*/
-  gap: 1rem;
-  /*opacity: 0px;*/
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  gap: 10%;
 }
 
 .article-subject,
@@ -236,24 +246,60 @@ html {
   color: #667085;
 }
 
-.resources-container,
-.news-block-container {
-  flex: 1;
-}
+@media (min-width: 1200px) {
+  .search-aside-container {
+    display: grid;
+  }
 
-@media (max-width: 1100px) {
-  .news-block-container {
-    grid-template-columns: 1fr 1fr;
+  #overlay {
+    display: none;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1200px) {
+  #aside-btn {
+    background: #FFFFFF;
+    display: block;
+    padding: 8px 16px 8px 16px;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .nav-title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+
+  .news-block-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search-aside-container {
+    display: none;
+    position: fixed;
+    height: 100%;
+    z-index: 4;
+    background: #FFFFFF;
+  }
+
+  .search-aside-container.open {
+    left: 0;
+    display: grid;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 950px) {
   .logo-container>img {
     display: none;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .news-block-container {
     grid-template-columns: 1fr;
   }

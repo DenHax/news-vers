@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -14,11 +15,12 @@
 
 <body>
   <div class="news-container">
+    <div class="hidden" id="overlay"></div>
     <aside class="search-aside-container">
       <div class="search-container">
         <div class="search-line">
           <div class="logo-container">
-            <img src="./assets/logo.svg" />
+            <img src="./assets/logo.svg" alt="logo" />
             <h2>Вариант 4</h2>
           </div>
           <input placeholder="Поиск" />
@@ -39,10 +41,13 @@
     </aside>
     <div class="news-main-container">
       <header class="nav-conatiner">
-        <h2>Все контакты</h2>
+        <div class="nav-title">
+          <button id="aside-btn">≡</button>
+          <h2>Все контакты</h2>
+        </div>
         <div class="sort-dropdown-container">
           <div class="dropdown-btn">
-            <p id="dropdown-label">По умолчанию</p><img src="assets/row.svg" />
+            <p id="dropdown-label">По умолчанию</p><img src="assets/row.svg" alt="row" />
           </div>
           <ul class="dropdown-list">
             <li>По умолчанию</li>
@@ -62,7 +67,7 @@
                 <p>сегодня в 18:30</p>
               </div>
             </header>
-            <img src="assets/monument.png">
+            <img src="assets/monument.png" alt="monument">
             <h3>Изготовленный Зурабом Церетели памятник Тихону Хренникову открыли в Ельце</h3>
             <p>Новая достопримечательность появилась в Ельце. Здесь открыли памятник композитору Тихону Хренникову.
               В этом
@@ -79,7 +84,7 @@
                 <p>сегодня в 18:30</p>
               </div>
             </header>
-            <img src="assets/runner.png">
+            <img src="assets/runner.png" alt="runner man">
             <h3>Липецк признан беговой столицей России 2023 года</h3>
             <p>Липецк признан беговой столицей России 2023 года по итогам полумарафона «Забег.рф». В Липецке было 4000
               участников забега, которые показали лучший...</p>
@@ -95,7 +100,7 @@
                 <p>сегодня в 18:30</p>
               </div>
             </header>
-            <img src="assets/car.png">
+            <img src="assets/car.png" alt="sport car">
             <h3>Электрокар EVOLUTE из Липецкой области признан электромобильным брендом № 1 в России</h3>
             <p>Электрокар под маркой EVOLUTE вновь подтвердил звание «Электромобиля № 1» в России...</p>
           </div>
@@ -110,7 +115,7 @@
                 <p>сегодня в 18:30</p>
               </div>
             </header>
-            <img src="assets/man.png">
+            <img src="assets/man.png" alt="politican">
             <h3>Игорь Артамонов посетил белгородцев в липецком пункте временного размещения</h3>
             <p>Губернатор Липецкой области Игорь Артамонов, как и обещал ранее, посетил пункт временного размещения,
               в котором сейчас...</p>
