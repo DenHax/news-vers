@@ -46,7 +46,7 @@ html {
   width: 30%;
   gap: 1rem;
   border: 0px 1px 0px 0px;
-  align-content: space-between;
+  /*align-content: space-between;*/
 }
 
 .search-container,
@@ -221,8 +221,11 @@ html {
 .news-article-container {
   width: 100%;
   height: auto;
-  display: grid;
-  grid-template-rows: 0.5fr 3fr 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  animation-name: image-exist;
+  animation-duration: 2s;
+  /*grid-template-rows: 0.5fr 3fr 1fr 1fr;*/
   /*flex-direction: column;*/
   padding: 1.5rem;
   border-radius: 8px;
@@ -230,6 +233,19 @@ html {
   border: 1px solid #EAECF0;
   /*opacity: 0px;*/
 }
+
+@keyframes image-exist {
+  from {
+    transform: translateX(60%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 .news-header {
   display: grid;
