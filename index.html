@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>News</title>
     <link href="./styles.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <!--<link rel="preconnect" href="https://fonts.googleapis.com" />-->
+    <!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />-->
+    <!--<link-->
+    <!--  href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"-->
+    <!--  rel="stylesheet"-->
+    <!--/>-->
   </head>
   <body onload="loadData()">
     <div id="loader">
@@ -25,13 +25,19 @@
               <img src="./assets/logo.svg" alt="logo" />
               <h2>Вариант 4</h2>
             </div>
-            <input placeholder="Поиск" />
+            <input class="search-line__input" placeholder="Поиск" />
           </div>
           <div class="resources-container">
             <h2>Все новости</h2>
-            <p>Спорт</p>
-            <p>Общество</p>
-            <p>Экономика</p>
+            <p class="resources-container__label" onclick="getSubject(this)">
+              Спорт
+            </p>
+            <p class="resources-container__label" onclick="getSubject(this)">
+              Общество
+            </p>
+            <p class="resources-container__label" onclick="getSubject(this)">
+              Экономика
+            </p>
           </div>
         </div>
         <footer>
@@ -46,15 +52,40 @@
             <button id="aside-btn">≡</button>
             <h2>Все контакты</h2>
           </div>
+
+          <!--<div class="sort-dropdown-container">-->
+          <!--  <button-->
+          <!--    class="dropdown-btn"-->
+          <!--    onclick="toggleDropdown()"-->
+          <!--    id="dropdownButton"-->
+          <!--  >-->
+          <!--    <span class="dropdown-label" id="selectedOption"-->
+          <!--      >По умолчанию</span-->
+          <!--    >-->
+          <!--    <img src="assets/row.svg" alt="row" />-->
+          <!--  </button>-->
+          <!--  <div class="dropdown-list" id="dropdownMenu">-->
+          <!--    <a href="#" onclick="selectOption('По умолчанию')"-->
+          <!--      >По умолчанию</a-->
+          <!--    >-->
+          <!--    <a href="#" onclick="selectOption('Сначала новые')"-->
+          <!--      >Сначала новые</a-->
+          <!--    >-->
+          <!--    <a href="#" onclick="selectOption('Сначала старые')"-->
+          <!--      >Сначала старые</a-->
+          <!--    >-->
+          <!--  </div>-->
+          <!--</div>-->
+
           <div class="sort-dropdown-container">
             <div class="dropdown-btn">
               <p id="dropdown-label">По умолчанию</p>
               <img src="assets/row.svg" alt="row" />
             </div>
             <ul class="dropdown-list">
-              <li>По умолчанию</li>
-              <li>Сначала новые</li>
-              <li>Сначала старые</li>
+              <li onclick="getFilterOption(this)">По умолчанию</li>
+              <li onclick="getFilterOption(this)">Сначала новые</li>
+              <li onclick="getFilterOption(this)">Сначала старые</li>
             </ul>
           </div>
         </header>
@@ -103,7 +134,10 @@
                 <p>Экономика</p>
               </div>
               <div class="article-date">
-                <p>сегодня в 18:30</p>
+                <p>
+                  <span class="article-date__day">сегодня</span> в
+                  <span class="article-date__time">13:30</span>
+                </p>
               </div>
             </header>
             <img src="assets/car.png" alt="sport car" />
