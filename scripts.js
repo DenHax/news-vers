@@ -52,6 +52,10 @@ function loadData() {
 
 function displayCards(cardsData) {
   const container = document.querySelector(".news-block-container");
+  if (cardsData.length === 0) {
+    container.innerHTML = "<p>404 NOT FOUND</p>";
+    return;
+  }
   container.innerHTML = "";
   cardsData.forEach((card) => {
     const cardContainer = document.createElement("div");
