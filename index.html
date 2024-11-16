@@ -1,63 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>News</title>
-  <link href="./styles.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <div class="news-container">
-    <div class="hidden" id="overlay"></div>
-    <aside class="search-aside-container">
-      <div class="search-container">
-        <div class="search-line">
-          <div class="logo-container">
-            <img src="./assets/logo.svg" alt="logo" />
-            <h2>Вариант 4</h2>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>News</title>
+    <link href="./styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body onload="loadData()">
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+    <div class="news-container">
+      <div class="hidden" id="overlay"></div>
+      <aside class="search-aside-container">
+        <div class="search-container">
+          <div class="search-line">
+            <div class="logo-container">
+              <img src="./assets/logo.svg" alt="logo" />
+              <h2>Вариант 4</h2>
+            </div>
+            <input placeholder="Поиск" />
           </div>
-          <input placeholder="Поиск" />
-        </div>
-        <div class="resources-container">
-          <h2>Все новости</h2>
-          <p>Спорт</p>
-          <p>Общество</p>
-          <p>Экономика</p>
-        </div>
-      </div>
-      <footer>
-        <div class="copyright-container">
-          <p>&copy; Вариант 4. Дерябин Александр, группа АИ-22
-          </p>
-        </div>
-      </footer>
-    </aside>
-    <div class="news-main-container">
-      <header class="nav-conatiner">
-        <div class="nav-title">
-          <button id="aside-btn">≡</button>
-          <h2>Все контакты</h2>
-        </div>
-        <div class="sort-dropdown-container">
-          <div class="dropdown-btn">
-            <p id="dropdown-label">По умолчанию</p><img src="assets/row.svg" alt="row" />
+          <div class="resources-container">
+            <h2>Все новости</h2>
+            <p>Спорт</p>
+            <p>Общество</p>
+            <p>Экономика</p>
           </div>
-          <ul class="dropdown-list">
-            <li>По умолчанию</li>
-            <li>Сначала новые</li>
-            <li>Сначала старые</li>
-          </ul>
         </div>
-      </header>
-      <main>
-        <div class="news-block-container">
+        <footer>
+          <div class="copyright-container">
+            <p>&copy; Вариант 4. Дерябин Александр, группа АИ-22</p>
+          </div>
+        </footer>
+      </aside>
+      <div class="news-main-container">
+        <header class="nav-conatiner">
+          <div class="nav-title">
+            <button id="aside-btn">≡</button>
+            <h2>Все контакты</h2>
+          </div>
+          <div class="sort-dropdown-container">
+            <div class="dropdown-btn">
+              <p id="dropdown-label">По умолчанию</p>
+              <img src="assets/row.svg" alt="row" />
+            </div>
+            <ul class="dropdown-list">
+              <li>По умолчанию</li>
+              <li>Сначала новые</li>
+              <li>Сначала старые</li>
+            </ul>
+          </div>
+        </header>
+        <main class="news-block-container">
           <div class="news-article-container">
             <header class="news-header">
               <div class="article-subject">
@@ -67,29 +68,34 @@
                 <p>сегодня в 18:30</p>
               </div>
             </header>
-            <img src="assets/monument.png" alt="monument">
-            <h3>Изготовленный Зурабом Церетели памятник Тихону Хренникову открыли в Ельце</h3>
-            <p>Новая достопримечательность появилась в Ельце. Здесь открыли памятник композитору Тихону Хренникову.
-              В этом
-              году </p>
+            <img src="assets/monument.png" alt="monument" />
+            <h3>
+              Изготовленный Зурабом Церетели памятник Тихону Хренникову открыли
+              в Ельце
+            </h3>
+            <p>
+              Новая достопримечательность появилась в Ельце. Здесь открыли
+              памятник композитору Тихону Хренникову. В этом году
+            </p>
           </div>
-
 
           <div class="news-article-container">
             <header class="news-header">
               <div class="article-subject">
-                <p>Общество</p>
+                <p>Спорт</p>
               </div>
               <div class="article-date">
                 <p>сегодня в 18:30</p>
               </div>
             </header>
-            <img src="assets/runner.png" alt="runner man">
+            <img src="assets/runner.png" alt="runner man" />
             <h3>Липецк признан беговой столицей России 2023 года</h3>
-            <p>Липецк признан беговой столицей России 2023 года по итогам полумарафона «Забег.рф». В Липецке было 4000
-              участников забега, которые показали лучший...</p>
+            <p>
+              Липецк признан беговой столицей России 2023 года по итогам
+              полумарафона «Забег.рф». В Липецке было 4000 участников забега,
+              которые показали лучший...
+            </p>
           </div>
-
 
           <div class="news-article-container">
             <header class="news-header">
@@ -100,11 +106,16 @@
                 <p>сегодня в 18:30</p>
               </div>
             </header>
-            <img src="assets/car.png" alt="sport car">
-            <h3>Электрокар EVOLUTE из Липецкой области признан электромобильным брендом № 1 в России</h3>
-            <p>Электрокар под маркой EVOLUTE вновь подтвердил звание «Электромобиля № 1» в России...</p>
+            <img src="assets/car.png" alt="sport car" />
+            <h3>
+              Электрокар EVOLUTE из Липецкой области признан электромобильным
+              брендом № 1 в России
+            </h3>
+            <p>
+              Электрокар под маркой EVOLUTE вновь подтвердил звание
+              «Электромобиля № 1» в России...
+            </p>
           </div>
-
 
           <div class="news-article-container">
             <header class="news-header">
@@ -115,16 +126,19 @@
                 <p>сегодня в 18:30</p>
               </div>
             </header>
-            <img src="assets/man.png" alt="politican">
-            <h3>Игорь Артамонов посетил белгородцев в липецком пункте временного размещения</h3>
-            <p>Губернатор Липецкой области Игорь Артамонов, как и обещал ранее, посетил пункт временного размещения,
-              в котором сейчас...</p>
+            <img src="assets/man.png" alt="politican" />
+            <h3>
+              Игорь Артамонов посетил белгородцев в липецком пункте временного
+              размещения
+            </h3>
+            <p>
+              Губернатор Липецкой области Игорь Артамонов, как и обещал ранее,
+              посетил пункт временного размещения, в котором сейчас...
+            </p>
           </div>
-        </div>
-      </main>
+        </main>
+      </div>
     </div>
-  </div>
-  <script src="./scripts.js"></script>
-</body>
-
+    <script src="./scripts.js"></script>
+  </body>
 </html>
